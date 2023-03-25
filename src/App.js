@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="app">
       <Header logoTitle="React" navbarItem={["Auth", "Settings", "Product"]} />
-      <Input />
+      <Input errorTitle="Please fill in the blanks!"/>
     </div>
   );
 };

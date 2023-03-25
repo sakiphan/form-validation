@@ -1,17 +1,28 @@
-.app {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-  font-family: sans-serif;
-  text-align: center;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
-/* animasyona isim verip keyframe de bunu belirtiyoruz. duration ile animasyonun kaç saniye sürmesi gerektiğini söylüyoruz. infinite ise animasyonun sonsuza kadar tekrarlanacağını gösterir. Hepsini tek satırda da yazabiliriz.  */
+.app-header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
 
-
-/* keyframes bir kuralmış ve animasyonun nasıl çalışacağını tanımlıyor. from başlangıç değeri to ise animasyonun bitiş değeridir. */
-
-
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  max-width: 400px; /* Yeni özellik */
+  margin-left: auto; /* Formu ortalamak için */
+  margin-right: auto; /* Formu ortalamak için */
+}
 
 
 h1 {
@@ -22,13 +33,6 @@ h1 {
 h3 {
   font-size: 24px;
   margin-bottom: 10px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 15px;
 }
 
 input[type="text"] {
@@ -97,14 +101,6 @@ li {
   cursor: pointer;
 }
 
-.app-header {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .app-header nav {
   margin-left: auto;
 }
@@ -113,6 +109,7 @@ li {
   display: flex;
   justify-content: flex-end;
   list-style: none;
+  
   margin: 0;
   padding: 0;
   gap: 15px;
@@ -126,6 +123,5 @@ li {
 }
 
 li:hover {
-  
   cursor: pointer;
 }

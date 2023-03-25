@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Input = () => {
+const Input = ({errorTitle}) => {
   //useState hooku kullanarak üç adet state değişkeni tanımladım.
   const [bird, setBird] = useState("");
   const [cat, setCat] = useState("");
@@ -55,7 +55,7 @@ const Input = () => {
           onChange={(event) => setBird(event.target.value)}
         />
         {/* Form doğru şekilde kullanılmazsa, kullanıcıya hata mesajı gösteriyoruz. birdErr değişkeninin durumunu bakıyoruz doğru ise span içindeki mesajı yazdırıyoruz. Formu submit edince birdErr true dönüyor ve mesajı yazdırıyor. */}
-        {birdErr && <span>Please fill in the blanks!</span>}
+        {birdErr && <span>{errorTitle}</span>}
 
         <input
           type="text"
@@ -64,14 +64,14 @@ const Input = () => {
           // Kullanıcı formu her değiştirdiğinde , statenin güncellenmesini ve yeni değer görüntülenmesini sağlıyoruz burada.
           onChange={(event) => setCat(event.target.value)}
         />
-        {catErr && <span>Please fill in the blanks!</span>}
+        {catErr && <span>{errorTitle}</span>}
         <input
           type="text"
           value={dog}
           placeholder="write a dog name"
           onChange={(event) => setDog(event.target.value)}
         />
-        {dogErr && <span>Please fill in the blanks!</span>}
+        {dogErr && <span>{errorTitle}</span>}
         <input
           type="submit"
           value="Create Animals"
