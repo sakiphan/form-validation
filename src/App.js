@@ -41,7 +41,7 @@ const App = () => {
       !dog && setDogErr(true);
     }
   };
-// Fonksiyona id parametresi verdim, Her bir animal nesnesi için id verdim ve parametre olarak verilen id ile eşleşmezse nesne yeni oluşan listede kalır dedim. filter methodu ile oluşan diziyi sildiriyoruz. Burada her id parametresi ile eşleşme olmayınca filter methodu devreye giriyor.
+// Fonksiyona id parametresi verdim ve setAnimalList'i çağırdım. setAnimalList'i değişkeni güncellemek için kullandım. SetAnimalList previousAnimalList'i değerine dayanarak yeni bir durum değişkeni döndürür. previousAnimalList'i dizisini filtrelemek için filter methodunu kullandık. Burada belirtilen koşulu sağlamayan tüm ögeleri kaldırıp yeni bir dizi oluşturmamıza olanak sağlar. Eğer id işlemin aldığı id parametresine eşit değilse eklenilen hayvan yeni diziye dahil edildi.
   const handleDeleteAnimal = (id) => {
     setAnimalList((previousAnimalList) =>
       previousAnimalList.filter((animal) => animal.id !== id)
