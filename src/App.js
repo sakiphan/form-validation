@@ -41,7 +41,7 @@ const App = () => {
       !dog && setDogErr(true);
     }
   };
-// Fonksiyona id parametresi verdim ve setAnimalList'i çağırdım. setAnimalList'i değişkeni güncellemek için kullandım. SetAnimalList previousAnimalList'i değerine dayanarak yeni bir durum değişkeni döndürür. previousAnimalList'i dizisini filtrelemek için filter methodunu kullandık. Burada belirtilen koşulu sağlamayan tüm ögeleri kaldırıp yeni bir dizi oluşturmamıza olanak sağlar. Eğer id işlemin aldığı id parametresine eşit değilse eklenilen hayvan yeni diziye dahil edildi.
+// Fonksiyona id parametresi verdim ve setAnimalList'i çağırdım. setAnimalList'i değişkeni güncellemek için kullandım. SetAnimalList previousAnimalList'i değerine dayanarak yeni bir durum değişkeni döndürür. previousAnimalList'i dizisini filtrelemek için filter methodunu kullandık. Burada belirtilen koşulu sağlamayan tüm ögeleri kaldırıp yeni bir dizi oluşturmamıza olanak sağlar. Eğer id işlemin aldığı id parametresine eşitse eklenilen hayvan yeni diziye dahil edilmez ve silinmiş gibi davranır.
   const handleDeleteAnimal = (id) => {
     setAnimalList((previousAnimalList) =>
       previousAnimalList.filter((animal) => animal.id !== id)
